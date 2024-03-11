@@ -1,4 +1,10 @@
-import {getHeaders} from "../utils/apiUtils"
+const accessToken: string = import.meta.env.VITE_API_ACCESS_TOKEN
+
+const getHeaders = (): HeadersInit => {
+  return {
+    Authorization: `token ${accessToken}`,
+  }
+}
 
 export const apiService = async <T>(url: string): Promise<T> => {
   try {
