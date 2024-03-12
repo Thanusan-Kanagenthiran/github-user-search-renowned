@@ -32,6 +32,7 @@ export interface UserApiResponse {
   updated_at: string
   email?: string
   blog?: string
+  url: string
 }
 
 export interface FollowApiResponse {
@@ -41,10 +42,6 @@ export interface FollowApiResponse {
   html_url: string
   url: string
 }
-
-export interface FollowerApiResponse extends Array<FollowApiResponse> {}
-
-export interface FollowingApiResponse extends Array<FollowApiResponse> {}
 
 export interface UserRepositoriesResponse extends Array<RepoApiResponse> {}
 
